@@ -634,7 +634,7 @@ button {
   text-align: center;
 }
 .footer-form-field-btn {
-  display: inline-block;
+  justify-content: center;
 }
 .footer-form-submit {
   background-color: var(--background-color-btn-hero);
@@ -914,11 +914,18 @@ button {
 }
 .button-portfolio-list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 265px;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+}
+.portfolio {
+  padding-top: 48px;
 }
 .button-portfolio-item:not(:last-child) {
   margin-right: 24px;
+  margin-bottom: 16px;
 }
 
 /* ======================portfolio elements=============== */
@@ -928,10 +935,11 @@ button {
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
-  margin-top: 72px;
+  margin-top: 48px;
 }
 .flex-element {
-  flex-basis: calc((100% - 48px) / 3);
+  flex-basis: 100%;
+  /* flex-basis: calc((100% - 48px) / 3); */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   transition: box-shadow var(--hover-effect);
 }
@@ -982,9 +990,17 @@ button {
   padding-bottom: 32px;
   padding-left: 16px;
   padding-top: 32px;
+  width: inherit;
 }
 .text-features-title {
   padding-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: left;
+}
+.text-features-p {
+  color: #434455;
 }
 
 @media screen and (min-width: 768px) {
