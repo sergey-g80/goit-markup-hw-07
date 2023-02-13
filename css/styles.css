@@ -900,7 +900,7 @@ button {
   transition: background-color var(--hover-effect);
 }
 /*===================portfolio=========================*/
-/*====================Кнопки=================*/
+/*====================button=================*/
 
 .portfolio {
   padding-top: 96px;
@@ -956,7 +956,6 @@ button {
   margin-top: 48px;
 }
 .flex-element {
-  /* flex-basis: 100%; */
   /* flex-basis: calc((100% - 48px) / 3); */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   transition: box-shadow var(--hover-effect);
@@ -975,6 +974,31 @@ button {
   overflow: hidden;
 }
 
+.overley {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
+  transform: translate(0, 100%);
+  transition: transform var(--hover-effect);
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.portfolio-list-link-wrapper:hover .overley,
+.portfolio-list-link-wrapper:focus .overley {
+  transform: translate(0, 0);
+}
+
 .flex-element-text {
   border-color: #e7e9fc;
   border-style: solid;
@@ -983,19 +1007,15 @@ button {
   padding-bottom: 32px;
   padding-left: 16px;
   padding-top: 32px;
-  width: 100%;
 }
 .text-features-title {
   padding-bottom: 8px;
   font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
   text-align: left;
 }
 .portfolio-text-features-p {
   color: #434455;
 }
-
 @media screen and (min-width: 768px) {
   .conteiner {
     width: 768px;
@@ -1145,13 +1165,13 @@ button {
     /* display: flex; */
     text-align: left;
   }
-  .footer-text {
+  /* .footer-text {
     margin: 0 24px 0 0;
-  }
+  } */
   .footer-div {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 0px;
   }
   .text-footer-social {
     text-align: left;
@@ -1159,25 +1179,22 @@ button {
   .footer-form-title {
     text-align: left;
   }
-  .footer-for {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
+
   .footer-form-field-btn {
     display: flex;
     /* justify-content: center; */
     align-items: center;
   }
-  .footer-form-submit {
-    margin-top: 0;
-  }
+
   .footer-form-imput {
     width: 264px;
     margin-right: 24px;
   }
-  /* ======================portfolio elements=============== */
-
+  /* ==========modal-form-footer=== */
+  .footer-form-submit {
+    margin-top: 0;
+  }
+  /* ======================portfolio =============== */
   .portfolio {
     padding-top: 96px;
     padding-bottom: 120px;
@@ -1219,17 +1236,12 @@ button {
     margin-bottom: 0;
   }
   /* ======================portfolio elements=============== */
-
   .flex-element {
     flex-basis: calc((100% - 24px) / 2);
   }
-
-  .overley {
-    display: none;
-  }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .conteiner {
     width: 1160px;
   }
@@ -1434,13 +1446,12 @@ button {
     background-color: var(--background-calar-hero);
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 156px;
   }
   .logo-web-footer {
     display: flex;
   }
   .text-social {
-    margin-left: 0px;
+    margin-left: 269px;
   }
   .logo-footer-studio {
     color: #f4f4fd;
@@ -1448,11 +1459,11 @@ button {
   .footer-text {
     color: var(--color-text-footer);
     margin-top: 16px;
-
     width: 264px;
   }
   .footer-div {
     display: flex;
+    flex-wrap: nowrap;
   }
   .footer-text-social {
     margin-left: 120px;
@@ -1535,6 +1546,7 @@ button {
     padding-left: 16px;
     font-weight: 400;
     transition: border-color var(--hover-effect);
+    margin-right: 0;
   }
   .footer-form-imput:focus {
     outline: none;
@@ -1549,62 +1561,48 @@ button {
     position: absolute;
     top: 50%;
     right: 24px;
-
     transform: translateY(-50%);
     fill: #fff;
     height: 24px;
     width: 24px;
   }
-  .flex-conteiner {
+  /* ======================portfolio buttons=============== */
+  .portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio button {
+    background-color: #f4f4fd;
+    color: #4d5ae5;
+    border-color: #e7e9fc;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    transition: color var(--hover-effect), background-color var(--hover-effect),
+      box-shadow var(--hover-effect), border-color var(--hover-effect);
+  }
+  .portfolio button:hover,
+  .portfolio button:focus {
+    background-color: #404bbf;
+    color: #ffffff;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    border-color: #404bbf;
+  }
+  .button-portfolio-list {
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
-    margin-top: 72px;
+    align-items: center;
+    justify-content: center;
   }
-  .flex-element {
-    flex-basis: calc((100% - 48px) / 3);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    transition: box-shadow var(--hover-effect);
-  }
-  .flex-element:hover,
-  .flex-element:focus {
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-      0px 2px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  .button-portfolio-item:not(:last-child) {
+    margin-right: 24px;
   }
 
-  .portfolio-list-link-wrapper {
-    display: block;
-  }
-  .portfolio-list-img-wrapper {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .overley {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    color: #f4f4fd;
-    background-color: #4d5ae5;
-    transform: translate(0, 100%);
-    transition: transform var(--hover-effect);
-
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  .portfolio-list-link-wrapper:hover .overley,
-  .portfolio-list-link-wrapper:focus .overley {
-    transform: translate(0, 0);
-  }
   /* ======================portfolio elements=============== */
 
   .flex-conteiner {
@@ -1656,5 +1654,18 @@ button {
   .portfolio-list-link-wrapper:hover .overley,
   .portfolio-list-link-wrapper:focus .overley {
     transform: translate(0, 0);
+  }
+
+  .flex-element-text {
+    border-color: #e7e9fc;
+    border-style: solid;
+    border-width: 1px;
+    border-top-width: 0;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-top: 32px;
+  }
+  .text-features-title {
+    padding-bottom: 8px;
   }
 }
