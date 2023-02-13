@@ -53,7 +53,9 @@
           </ul>
         </address>
         <button class="menu-open-buttton" type="button" data-menu-open>
-          0
+          <svg class="menu-open-buttton-icon">
+            <use href="./images/sprite.svg#icon-hamburger"></use>
+          </svg>
         </button>
       </div>
       <div class="mobile-menu is-hidden" data-menu>
@@ -129,12 +131,33 @@
             <li class="flex-element">
               <a class="portfolio-list-link-wrapper link" href="#"
                 ><div class="portfolio-list-img-wrapper">
-                  <img
-                    src="./images/img-1-BankingAppInterfaceConcept.jpg"
-                    alt="Banking App Interface Concept"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portf-mobile/1-desktop.jpg     1x,
+                        ./images/portf-mobile/1-desktop-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portf-mobile/1-tablet.jpg     1x,
+                        ./images/portf-mobile/1-tablet-@2x.jpg 2x
+                      "
+                      media="(min-width: 78px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portf-mobile/1-mobile.jpg     1x,
+                        ./images/portf-mobile/1-mobile-@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/img-1-BankingAppInterfaceConcept.jpg"
+                      alt="Banking App Interface Concept"
+                    />
+                  </picture>
                   <p class="overley">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -145,19 +168,40 @@
                   <h3 class="text-features-title link">
                     Banking App Interface Concept
                   </h3>
-                  <p class="text-features-p">App</p>
+                  <p class="portfolio-text-features-p">App</p>
                 </div></a
               >
             </li>
             <li class="flex-element">
               <a class="portfolio-list-link-wrapper link" href="#"
                 ><div class="portfolio-list-img-wrapper">
-                  <img
-                    src="./images/img-2-CashlessPayment.jpg"
-                    alt="Cashless Payment"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portf-mobile/2-desktop.jpg     1x,
+                        ./images/portf-mobile/2-desktop-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portf-mobile/2-tablet.jpg     1x,
+                        ./images/portf-mobile/2-tablet-@2x.jpg 2x
+                      "
+                      media="(min-width: 78px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portf-mobile/2-mobile.jpg     1x,
+                        ./images/portf-mobile/2-mobile-@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/img-2-CashlessPayment.jpg"
+                      alt="Cashless Payment"
+                    />
+                  </picture>
 
                   <p class="overley">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -167,7 +211,7 @@
                 </div>
                 <div class="flex-element-text">
                   <h3 class="text-features-title">Cashless Payment</h3>
-                  <p class="text-features-p">Marketing</p>
+                  <p class="portfolio-text-features-p">Marketing</p>
                 </div></a
               >
             </li>
@@ -190,7 +234,7 @@
 
                 <div class="flex-element-text">
                   <h3 class="text-features-title">Meditaion App</h3>
-                  <p class="text-features-p">App</p>
+                  <p class="portfolio-text-features-p">App</p>
                 </div></a
               >
             </li>
@@ -211,7 +255,7 @@
                 </div>
                 <div class="flex-element-text">
                   <h3 class="text-features-title">Taxi Service</h3>
-                  <p class="text-features-p">Marketing</p>
+                  <p class="portfolio-text-features-p">Marketing</p>
                 </div></a
               >
             </li>
@@ -232,7 +276,7 @@
                 </div>
                 <div class="flex-element-text">
                   <h3 class="text-features-title">Screen Illustrations</h3>
-                  <p class="text-features-p">Design</p>
+                  <p class="portfolio-text-features-p">Design</p>
                 </div></a
               >
             </li>
@@ -253,7 +297,7 @@
                 </div>
                 <div class="flex-element-text">
                   <h3 class="text-features-title">Online Courses</h3>
-                  <p class="text-features-p">Marketing</p>
+                  <p class="portfolio-text-features-p">Marketing</p>
                 </div></a
               >
             </li>
@@ -274,7 +318,7 @@
                 </div>
                 <div class="flex-element-text">
                   <h3 class="text-features-title">Instagram Stories Concept</h3>
-                  <p class="text-features-p">Design</p>
+                  <p class="portfolio-text-features-p">Design</p>
                 </div></a
               >
             </li>
@@ -295,7 +339,7 @@
                 </div>
                 <div class="flex-element-text">
                   <h3 class="text-features-title">Organic Food</h3>
-                  <p class="text-features-p">Web Site</p>
+                  <p class="portfolio-text-features-p">Web Site</p>
                 </div></a
               >
             </li>
@@ -316,7 +360,7 @@
                 </div>
                 <div class="flex-element-text">
                   <h3 class="text-features-title">Fresh Coffee</h3>
-                  <p class="text-features-p">Web Site</p>
+                  <p class="portfolio-text-features-p">Web Site</p>
                 </div></a
               >
             </li>
