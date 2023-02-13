@@ -1114,6 +1114,9 @@ button {
     padding-top: 112px;
     padding-bottom: 108px;
   }
+  .hero {
+    max-width: 768px;
+  }
   .hero-title {
     font-size: 56px;
     padding-bottom: 40px;
