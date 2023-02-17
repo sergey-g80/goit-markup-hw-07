@@ -527,9 +527,9 @@ button {
 /* .footer-div {
   display: flex;
 } */
-/* .footer-text-social {
-  font-size: 16px;
-} */
+.footer-text-social {
+  margin-top: 72px;
+}
 .text-footer-social {
   font-weight: 500;
   font-size: 16px;
@@ -1132,6 +1132,7 @@ button {
   }
   .footer-text-social {
     padding-left: 24px;
+    margin-top: 0;
   }
   .text-footer-social {
     text-align: left;
@@ -1153,6 +1154,9 @@ button {
   /* ==========modal-form-footer=== */
   .footer-form-submit {
     margin-top: 0;
+  }
+  .footer-form-submit {
+    margin-left: 0px;
   }
   /* ==================modal-window============= */
   .modal {
