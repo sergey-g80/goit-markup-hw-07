@@ -126,6 +126,7 @@ button {
   height: 22px;
   width: 32px;
   border: none;
+  background-color: #fff;
 }
 .menu-open-buttton-icon {
   fill: #2e2f42;
